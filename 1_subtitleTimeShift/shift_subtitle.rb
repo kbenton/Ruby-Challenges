@@ -1,7 +1,6 @@
 #!/usr/bin/ruby
 
 require 'optparse'
-require 'pp'
 require 'time'
 
 DEBUG = TRUE;
