@@ -1,8 +1,7 @@
-require 'pp'
-
 class Polynomial
   attr_reader :order
   attr_reader :to_s
+  attr_reader :coefficients
 
   def initialize(coefficients)
     while not coefficients.empty? do
@@ -13,9 +12,9 @@ class Polynomial
       end
     end
 
-    pp coefficients
-
     raise ArgumentError, "Need at least 2 coefficients." unless (coefficients.size > 1)
+
+    @coefficients = coefficients
 
     @to_s = ""
     @order = 0
